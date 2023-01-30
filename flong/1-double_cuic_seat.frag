@@ -21,7 +21,7 @@ void main(){
     vec2 st=gl_FragCoord.xy/u_resolution;
     
     float b=.6;
-    float a=.5;
+    float a=.7;
     float x_lt_a=b-b*pow((1.-st.x/a),3.);
     float x_gt_a=b+(1.-b)*pow((st.x-a)/(1.-a),3.);
     float y=(1.-step(a,st.x))*x_lt_a+step(a,st.x)*x_gt_a;
